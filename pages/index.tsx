@@ -8,9 +8,10 @@ interface Props {
   collections: Collection[]
 }
 
-const Home = ({ collections }: Props) => {
-  console.log(collections)
+// background-color: #0093E9;
+// background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 
+const Home = ({ collections }: Props) => {
   return (
     <div className="mx-auto flex min-h-screen max-w-7xl flex-col py-20 px-10 2xl:px-0">
       <Head>
@@ -26,10 +27,10 @@ const Home = ({ collections }: Props) => {
         NFT Market Place
       </h1>
 
-      <main className="bg-slate-100 p-10 shadow-xl shadow-rose-400/20">
+      <main className="bg-gradient-to-r from-[#0093E9] to-[#80D0C7] p-10 shadow-xl shadow-slate-600">
         <div className="grid space-x-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {collections.map((collection) => (
-            <Link href={`/nft/${collection.slug.current}`}>
+            <Link key={collection._id} href={`/nft/${collection.slug.current}`}>
               <div className="flex cursor-pointer flex-col items-center transition-all duration-200 hover:scale-105">
                 <img
                   className="h-96 w-60 rounded-2xl object-cover"
@@ -39,7 +40,7 @@ const Home = ({ collections }: Props) => {
 
                 <div className="p-5">
                   <h2 className="text-3xl">{collection.title}</h2>
-                  <p className="mt-2 text-sm text-gray-400">
+                  <p className="mt-2 text-sm text-white">
                     {collection.description}
                   </p>
                 </div>

@@ -13,6 +13,8 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-tap-highlight-color: transparent;
   overflow-y: scroll;
+  background-color: #3d9cd0;
+  background-image: linear-gradient(160deg, #3d9cd0 0%, #010118 100%);
 }
 
 /* Hide scroll bar for chrome, safari and opera */
