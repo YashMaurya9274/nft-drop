@@ -92,7 +92,7 @@ function NFTDropPage({ collection }: Props) {
       })
       .catch((err) => {
         console.log(err)
-        toast('Whoops... Something wen wrong!', {
+        toast('Whoops... Something went wrong!', {
           style: {
             background: 'red',
             color: 'white',
